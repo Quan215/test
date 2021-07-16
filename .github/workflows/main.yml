@@ -43,10 +43,8 @@ jobs:
         run: git add .
       - name: commit changed files
         run: git commit -m "Auto updating TODO.txt"
-#       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
-      - name: push
-        run: git push "https://Quan215:${{ secrets.GITHUB_TOKEN }}@github.com/test.git" HEAD:${{ github.ref }} --follow-tags 
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
