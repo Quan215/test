@@ -38,6 +38,8 @@ jobs:
           git config --local user.email "70443949+Quan215@users.noreply.github.com"
       - name: stage changed files
         run: git add .
+      - name: fetch file
+        run: git fetch
       - name: commit changed files
         run: git commit -m "Auto updating TODO.txt"
       - name: push code to master
