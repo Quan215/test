@@ -33,7 +33,7 @@ jobs:
         run: |
           python3 test.py
       - name: check for changes
-        run: git status
+        run: git config --global --list
       - name: stage changed files
         run: git add .
       - name: commit changed files
